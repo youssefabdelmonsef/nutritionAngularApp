@@ -1,0 +1,118 @@
+@import '../../../constants/styles.constant.scss';
+
+::ng-deep {
+    nav {
+        font-family: ResamitzBold;
+        font-size: 16px;
+        max-height: 110px;
+        background-color: white !important;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        .logo {
+            max-width: 85px;
+        }
+        .sub-logos-container {
+            text-align: right;
+            .sub-logo {
+                height: 29px;
+                &.advisory-logo-grey, &.advisory-logo-green {
+                    margin-right: 5px;
+                }
+                .advisory-logo-grey {
+
+                }
+                .advisory-logo-green {
+                    display: block;
+                }
+                .systems-logo-grey {
+
+                }
+                .systems-logo-yellow {
+                    display: block;
+                }
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    .link {
+                        cursor: pointer;
+                    }
+                    .link:hover {
+                        color: black;
+                        font-family: ResamitzBold;
+                        transform: scale(1.05);
+                        img {
+                            transform: scale(1);
+                        }
+                    }
+                    &.activeLinkLine {
+                        // border-bottom: 10px solid $custom-cyan-color;
+                        .link {
+                            font-size: 18px;
+                            font-family: ResamitzBold;
+                            color: $custom-green-color;
+                        }
+                    }
+                    .arrow {
+                        height: 10px;
+                    }
+                    .dropdown-menu {
+                        border: none;
+                        border-radius: 0px;
+                        background-color: $custom-dark-grey-header-color;
+                        font-size: 12px;
+                        color: white;
+                        padding: 0px;
+                        .dropdown-item {
+                            cursor: pointer;
+                            border-bottom: 1px solid white;
+                            padding: 12px;
+                        }
+                        .dropdown-item:hover {
+                            background-color: $custom-dark-grey-header-color;
+                            color: $custom-cyan-color;
+                        }
+                        .dropdown-item:active {
+                            background-color: $custom-dark-grey-header-color;
+                        }
+                        .dropdown-item:last-child {
+                            border: none;
+                        }
+                    }
+                }
+                .nav-link::after{
+                    display: none;
+                } 
+            }
+        }
+        #navbarNavDropdown {
+            background-color: white !important;
+        }
+        .navbar-collapse {
+            z-index: 9;
+            box-shadow: 0px 20px 8px -4px rgba(0, 0, 0, 0.35);
+        }
+    }
+}
+
+/** desktop */
+@media (min-width: 768px) {
+        nav {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        .dropdown-menu {
+                            border-top: 10px solid $custom-cyan-color;
+                            top: 38px;
+                            text-align: center;
+                        }
+                    }
+                    
+                }
+            }
+            .navbar-collapse {
+                z-index: 9;
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            }
+        }
+}

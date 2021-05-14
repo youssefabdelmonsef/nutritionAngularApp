@@ -1,0 +1,31 @@
+<div class="container nutrition-analysis">
+    <h3>Nutrition Analysis</h3>
+    <div class="inputs-container">
+        <div>
+            Please add ingredients below
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="addIngredient()">Add Ingredient</button>
+        </div>
+        <div class="ingredient-group row" *ngFor="let ing of ingredients; let i=index">
+            <mat-form-field class="col-12 col-lg-3">
+                <mat-label>Quantity</mat-label>
+                <input matInput placeholder="Ex. 1" [(ngModel)]="ing.quantity">
+            </mat-form-field>
+            <mat-form-field class="col-12 col-lg-3">
+                <mat-label>Unit</mat-label>
+                <input matInput placeholder="Ex. large or kilograms" [(ngModel)]="ing.unit">
+            </mat-form-field>
+            <mat-form-field class="col-12 col-lg-3">
+                <mat-label>Food</mat-label>
+                <input matInput placeholder="Ex. apple" [(ngModel)]="ing.food">
+            </mat-form-field>
+            <div class="col-12 col-lg-3">
+                <button class="btn btn-danger" (click)="removeIngredient(i)">Remove Ingredient</button>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success" (click)="submit()">Submit</button>
+        </div>
+    </div>
+</div>
