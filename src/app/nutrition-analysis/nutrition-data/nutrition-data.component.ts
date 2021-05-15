@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTES } from 'src/constants/routes.constant';
+import { NutritionAnalysisService } from '../nutrition-analysis.service';
 
 @Component({
   selector: 'nutrition-data',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NutritionDataComponent implements OnInit {
 
-  constructor() { }
+  showTotalNutrition: boolean = false;
+
+  constructor(
+    public nutritionAnalysisService: NutritionAnalysisService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    if(!this.nutritionAnalysisService.ingredientsResponse) {
+      this.router.navigate([ROUTES.NUTRITION_ANALYSIS.NUTRITION_ANALYSIS_ROOT+ROUTES.NUTRITION_ANALYSIS.NUTRITION_INPUTS]);
+    }
   }
 
+  toggleTotalNutritions() {
+    console.log(this.showTotalNutrition)
+    this.showTotalNutrition = !this.showTotalNutrition;
+  }
 }

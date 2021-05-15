@@ -47,6 +47,7 @@ export class NutritionInputsComponent implements OnInit {
     };
 
     this.customHttpService.postHttp(url, data).subscribe((response)=> {
+      this.router.navigate([ROUTES.NUTRITION_ANALYSIS.NUTRITION_ANALYSIS_ROOT+ROUTES.NUTRITION_ANALYSIS.NUTRITION_DATA]);
       console.log(response);
     }, (error)=> {
       console.log(error);
