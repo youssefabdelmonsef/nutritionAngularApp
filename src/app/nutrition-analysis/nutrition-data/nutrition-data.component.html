@@ -1,1 +1,115 @@
-<h3>Nutrition Analysis Data</h3>
+<div class="container nutrition-data">
+  <h3>Nutrition Analysis Data</h3>
+  <div class="col-12 table">
+    <table>
+      <thead>
+        <tr>
+          <th>Qty</th>
+          <th>Unit</th>
+          <th>Food</th>
+          <th>Calories</th>
+          <th>Weight</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ing of nutritionAnalysisService.ingredientsResponse?.ingredientsData; let i=index">
+          <td>{{ ing.ingredient?.quantity }}</td>
+          <td>{{ ing.ingredient.unit }}</td>
+          <td>{{ ing.ingredient.food }}</td>
+          <td>{{ ing.calories }}</td>
+          <td>{{ ing.totalWeight }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <button class="btn btn-primary" *ngIf="!showTotalNutrition" (click)="toggleTotalNutritions()">Show Total Nutrition</button>
+    <button class="btn btn-primary" *ngIf="showTotalNutrition" (click)="toggleTotalNutritions()">Hide Total Nutrition</button>
+  </div>
+
+  <div *ngIf="showTotalNutrition" class="col-12 totalNutrition">
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Calories
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calories?.quantity || 0}}
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Fat
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.fat?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.fat?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Cholesterol
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.cholesterol?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.cholesterol?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Sodium
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.sodium?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.sodium?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Carbohydrate (Fiber, Suger)
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.carbohydrate?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.carbohydrate?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Protein
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.protein?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.Protein?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Calcium
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calcium?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calcium?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Iron
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.iron?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.iron?.unit}} 
+      </div>
+    </div>
+
+    <div class="row m-0 group">
+      <div class="title col-4">
+        Potassium
+      </div>
+      <div class="value col-4">
+        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.potassium?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.potassium?.unit}} 
+      </div>
+    </div>        
+
+  </div>
+
+</div>

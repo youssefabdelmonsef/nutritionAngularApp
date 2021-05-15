@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "nutritionapp-eg2"
+  },
+  "targets": {
+    "nutritionapp-eg2": {
+      "hosting": {
+        "nutritionapp-eg2": [
+          "nutritionapp-eg2"
+        ]
+      }
+    }
+  }
+}

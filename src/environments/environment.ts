@@ -6,11 +6,6 @@ export const environment = {
   production: false
 };
 
-export const PORTS = {
-  LOCAL: 'http://localhost:5001/nutritionapp-eg/us-central1/',
-  DEV: 'https://us-central1-nutritionapp-eg.cloudfunctions.net/'
-}
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

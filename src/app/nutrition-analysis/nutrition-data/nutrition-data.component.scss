@@ -1,0 +1,23 @@
+::ng-deep {
+    .nutrition-data {
+        .table {
+            padding: 0px;
+            tr {
+                border: 1px lightgray solid;
+            }
+        }
+    }
+
+    .totalNutrition {
+        padding: 20px 10px;
+                border: 1px solid grey;
+                border-radius: 3px;
+                margin: 10px 0px;
+                background-color: rgb(246, 246, 246);
+        .group {
+                border-bottom: 1px lightgray solid;
+
+        }
+    }
+
+}

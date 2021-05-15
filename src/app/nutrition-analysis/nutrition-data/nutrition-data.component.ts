@@ -24,7 +24,6 @@ export class NutritionDataComponent implements OnInit {
   }
 
   toggleTotalNutritions() {
-    console.log(this.showTotalNutrition)
     this.showTotalNutrition = !this.showTotalNutrition;
   }
 }
