@@ -60,4 +60,14 @@ export class NutritionInputsComponent implements OnInit {
     });
   }
 
+  getSubmitBtnStatus() {
+    let disabled = true;
+    this.ingredients.forEach((ing)=>{
+      if(ing.quantity && ing.unit && ing.food) {
+        disabled = false;
+      }
+    })
+    return disabled;
+  }
+
 }

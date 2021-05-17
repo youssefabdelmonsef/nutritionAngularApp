@@ -13,7 +13,7 @@ export class CustomHttpService {
   ) { }
 
   postHttp(url, data) {
-    url = `${PORTS.LOCAL}${url}`;
+    url = `${PORTS.DEV}${url}`;
     console.log('data in post request: ', data,);
     return this.http.post(url, data);
   }

@@ -25,7 +25,7 @@
             </div>
         </div>
         <div>
-            <button class="btn btn-success my-5" (click)="submit()">Submit</button>
+            <button class="btn btn-success my-5" [ngClass]="{'disabled': getSubmitBtnStatus()}" (click)="submit()">Submit</button>
             <img class="spinner" *ngIf="showSpinner" [src]="IMAGES.SPINNER">
         </div>
     </div>
