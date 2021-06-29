@@ -34,7 +34,7 @@
         Calories
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calories?.quantity || 0}}
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calories?.quantity)}}
       </div>
     </div>
 
@@ -43,7 +43,7 @@
         Fat
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.fat?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.fat?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.fat?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.fat?.unit}} 
       </div>
     </div>
 
@@ -52,7 +52,7 @@
         Cholesterol
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.cholesterol?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.cholesterol?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.cholesterol?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.cholesterol?.unit}} 
       </div>
     </div>
 
@@ -61,7 +61,7 @@
         Sodium
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.sodium?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.sodium?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.sodium?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.sodium?.unit}} 
       </div>
     </div>
 
@@ -70,7 +70,7 @@
         Carbohydrate (Fiber, Suger)
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.carbohydrate?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.carbohydrate?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.carbohydrate?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.carbohydrate?.unit}} 
       </div>
     </div>
 
@@ -79,7 +79,7 @@
         Protein
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.protein?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.Protein?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.protein?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.Protein?.unit}} 
       </div>
     </div>
 
@@ -88,7 +88,7 @@
         Calcium
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calcium?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calcium?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calcium?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.calcium?.unit}} 
       </div>
     </div>
 
@@ -97,7 +97,7 @@
         Iron
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.iron?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.iron?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.iron?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.iron?.unit}} 
       </div>
     </div>
 
@@ -106,7 +106,7 @@
         Potassium
       </div>
       <div class="value col-4">
-        {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.potassium?.quantity || 0}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.potassium?.unit}} 
+        {{ formatQuantity(nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.potassium?.quantity)}} {{nutritionAnalysisService?.ingredientsResponse?.totalNutritions?.potassium?.unit}} 
       </div>
     </div>        
 

@@ -26,4 +26,8 @@ export class NutritionDataComponent implements OnInit {
   toggleTotalNutritions() {
     this.showTotalNutrition = !this.showTotalNutrition;
   }
+
+  formatQuantity (quantity) {
+    return Number(quantity).toFixed(2) || 0;
+  }
 }
